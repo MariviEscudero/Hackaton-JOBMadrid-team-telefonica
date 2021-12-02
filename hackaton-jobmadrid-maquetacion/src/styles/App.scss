@@ -1,0 +1,82 @@
+@import 'core/variables';
+@import 'core/reset';
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.landing {
+  background-color: $black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  @media all and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100px 1fr;
+  }
+
+  &__title {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: $whitecolor;
+    @media all and (min-width: 1024px) {
+      margin-top: 60px;
+      font-size: 35px;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      text-align: center;
+    }
+  }
+  &__dropzonearea {
+    background-color: $whitecolor;
+    min-width: 80vw;
+    height: 40vh;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    border: 4px grey;
+    border-style: dashed;
+    @media all and (min-width: 1024px) {
+      min-width: 100px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+  &__filterbtn {
+    background-color: $bluecolor;
+    color: $whitecolor;
+    font-size: 18px;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    @media all and (min-width: 1024px) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+  &__dataview {
+    background-color: $whitecolor;
+    min-width: 80vw;
+    height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    @media all and (min-width: 1024px) {
+      margin: 100px;
+      min-width: 100px;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+}
